@@ -1,15 +1,14 @@
 import React from 'react';
-import CenteredText from '../components/CenteredText';
+import { Text } from 'react-native';
 import { setAddon, configure } from '@kadira/react-native-storybook';
+import Button from '../components/Button';
 
 setAddon({
-  addCenteredText(story, text) {
-    this.add(story, () => <CenteredText>{text}</CenteredText> );
+  addTextButton(story, text) {
+    this.add(story, () => <Button><Text>{text}</Text></Button> );
   }
 });
 
 configure(function () {
-  require('./stories/CenteredText');
-  require('./stories/SmallCenteredText');
-  require('./stories/UsingAddons');
+  require('./stories/Button');
 }, module);
