@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "storybook": "storybook start -p 9001"
+    "storybook": "storybook start -p 9001",
+    "storybook-ios": "storybook run-ios -a ReactNativeButtonStorybook -i org.reactjs.native.example.ReactNativeButtonStorybook"
   },
   "dependencies": {
     "react": "^15.1.0",
     "react-native": "^0.27.2"
   },
   "devDependencies": {
-    "@kadira/react-native-storybook": "^1.1.2"
+    "@kadira/react-native-storybook": "^1.6.0"
   }
 }
