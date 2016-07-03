@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start -p 9001",
-    "storybook-ios": "storybook run-ios -a ReactNativeButtonStorybook -i org.reactjs.native.example.ReactNativeButtonStorybook"
+    "storybook-ios": "storybook run-ios -a ReactNativeButtonStorybook -i org.reactjs.native.example.ReactNativeButtonStorybook",
+    "storybook-android": "storybook run-android -i com.reactnativebutton.storybook"
   },
   "dependencies": {
     "react": "^15.1.0",
