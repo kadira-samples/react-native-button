@@ -37,4 +37,17 @@ public class MainActivity extends ReactActivity {
             new MainReactPackage()
         );
     }
+
+    /**
+     * Returns the name of the main module. Determines the URL used to fetch the JS bundle
+     * from the packager server. It is only used when dev support is enabled.
+     */
+    @Override
+    protected String getJSMainModuleName() {
+      if (BuildConfig.BUILD_TYPE.equals("storybook")) {
+        return "storybook/index.android";
+      } else {
+        return "index.android";
+      }
+    }
 }

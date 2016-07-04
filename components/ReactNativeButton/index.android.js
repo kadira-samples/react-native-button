@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import CenterView from '../CenterView';
 import LargeText from '../LargeText';
 import SmallText from '../SmallText';
@@ -10,7 +10,7 @@ export default function ReactNativeButton(props) {
     <CenterView>
       <LargeText>Welcome to React Native!</LargeText>
       <SmallText>To get started, edit index.android.js</SmallText>
-      <Button><Text>And the button!</Text></Button>
+      <Button><View><Text>And the buttonn!</Text></View></Button>
     </CenterView>
   );
 }

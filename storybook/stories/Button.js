@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { storiesOf, action } from '@kadira/react-native-storybook';
 import CenterView from '../../components/CenterView';
 import Button from '../../components/Button';
@@ -12,7 +12,7 @@ stories.addDecorator(story => (
 
 stories.add('default view', () => (
   <Button onPress={action('clicked')}>
-    <Text>Hello World</Text>
+    <View><Text>Hello World</Text></View>
   </Button>
 ));
 
