@@ -1,7 +1,16 @@
 import { AppRegistry } from 'react-native';
-import { PreviewComponent } from '@kadira/react-native-storybook';
-import './config';
+import * as storybook from '@kadira/react-native-storybook';
+import addTextButton from './addons/add-text-button';
 
-AppRegistry.registerComponent('ReactNativeButton', function () {
-  return PreviewComponent({port: 9001, host: 'localhost'});
+// add global addons
+storybook.setAddon({
+  addTextButton,
 });
+
+// import your stories
+storybook.configure(function () {
+  require('./stories/Button');
+}, module);
+
+const StorybookUI = storybook.getStorybookUI({port: 9001, host: 'localhost'});
+AppRegistry.registerComponent('ReactNativeButton', () => StorybookUI);
