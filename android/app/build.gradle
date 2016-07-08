@@ -59,6 +59,13 @@ import com.android.build.OutputFile
  * ]
  */
 
+if (System.getenv('STORYBOOK_BUNDLE')){
+  project.ext.react = [
+    entryFile: "storybook/index.android.js",
+    bundleInStorybook: true
+  ]
+}
+
 apply from: "../../node_modules/react-native/react.gradle"
 
 /**
