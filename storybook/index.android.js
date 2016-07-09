@@ -1,16 +1,19 @@
-import { AppRegistry } from 'react-native';
 import * as storybook from '@kadira/react-native-storybook';
-import addTextButton from './addons/add-text-button';
 
-// add global addons
-storybook.setAddon({
-  addTextButton,
+storybook.configureUI({
+  channel: {
+    type: 'firebase',
+    options: {
+      baseUrl: 'https://kadira-storybooks.firebaseio.com/',
+      readRef: '/43f7f11a-e0fe-47f2-ba09-2c152785b342/browser',
+      writeRef: '/43f7f11a-e0fe-47f2-ba09-2c152785b342/device'
+    }
+  },
+  preview: {
+    appetize: {
+      android: 'phd1gpp2a2d260a4r3pxvujukw',
+    },
+  }
 });
 
-// import your stories
-storybook.configure(function () {
-  require('./stories/Button');
-}, module);
-
-const StorybookUI = storybook.getStorybookUI({port: 9001, host: 'localhost'});
-AppRegistry.registerComponent('ReactNativeButton', () => StorybookUI);
+require('./_index');
