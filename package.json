@@ -13,6 +13,6 @@
     "react-native": "^0.27.2"
   },
   "devDependencies": {
-    "@kadira/react-native-storybook": "^1.12.1"
+    "@kadira/react-native-storybook": "^1.12.3"
   }
 }
