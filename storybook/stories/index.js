@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { storiesOf, action, linkTo } from '@kadira/react-native-storybook';
+import { specs, describe, it } from 'storybook-addon-specifications'
 
 import Button from './Button';
 import CenterView from './CenterView';
@@ -24,4 +25,20 @@ storiesOf('Button', module)
     <Button onPress={action('clicked-emoji')}>
       <Text>😀 😎 👍 💯</Text>
     </Button>
-  ));
+  ))
+  .add('with some tests', function () {
+    const story = (
+      <Button onPress={action('clicked-text')}>
+        <Text>Hello Button</Text>
+      </Button>
+    );
+
+    specs(() => describe('with some tests', function () {
+      it('Should pass', function () {
+        // let output = mount(story);
+        // expect(output.text()).toContain('Hello World');
+      });
+    }));
+
+    return story;
+  });
