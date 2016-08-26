@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@kadira/react-native-storybook": "^2.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "storybook-addon-specifications": "^1.0.14"
   }
 }
